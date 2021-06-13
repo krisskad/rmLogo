@@ -42,3 +42,4 @@ __In your project file__
     # run process_image function with given parameters
     process_image("E:\project\rmLogo\INPUT_DIR", "E:\project\rmLogo\OUTPUT_DIR", None, (5,5))
 
+@Author krisskad
