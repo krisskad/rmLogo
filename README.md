@@ -38,8 +38,13 @@ It can remove logos from multiple files in a batch. But for now it is specific f
 ## Tutorial
 __In your project file__
 
-    from main impoprt process_image
+    from main import process_image
     # run process_image function with given parameters
     process_image("E:\project\rmLogo\INPUT_DIR", "E:\project\rmLogo\OUTPUT_DIR", None, (5,5))
 
+## Process
+    * Remove noise and watermark
+    * Remove logo using yolo object detection and masking
+    * Apply some post processing to increase quality
+    
 @Author krisskad
