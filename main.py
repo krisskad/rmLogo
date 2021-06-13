@@ -133,7 +133,7 @@ def process_image(input_dir = None, output_dir = None, single_image = None, kern
     # output folder
     # single image
     # kernel size
-    print(output_dir,output_dir,single_image,kernel_size)
+    # print(output_dir,output_dir,single_image,kernel_size)
     # file extensions
     extensions = ("*.jpg", "*.png")
     image_list = []
@@ -161,7 +161,7 @@ def process_image(input_dir = None, output_dir = None, single_image = None, kern
             if kernel_size[0] % 2 == 0 and kernel_size[1] % 2 == 0:
                 print("Please provide valid kernel values". kernel_size)
 
-    print(image_list)
+    # print(image_list)
     # Process Image
     for image in image_list:
         img = cv2.imread(image)
@@ -180,7 +180,7 @@ def process_image(input_dir = None, output_dir = None, single_image = None, kern
 
         # write image to output dir
         cv2.imwrite(os.path.join(output_dir, image_name), final)
-        print(output_dir)
+        # print(output_dir)
 
 
 
