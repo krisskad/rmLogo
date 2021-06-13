@@ -128,7 +128,7 @@ def post_processing(img):
         return img
 
 
-def input_function(input_dir = None, output_dir = None, single_image = None, kernel_size = None):
+def process_image(input_dir = None, output_dir = None, single_image = None, kernel_size = None):
     # input folder
     # output folder
     # single image
@@ -183,11 +183,13 @@ def input_function(input_dir = None, output_dir = None, single_image = None, ker
         print(output_dir)
 
 
-if __name__ == "__main__":
-    """
-    def input_function(input_dir: Any = None,
-                   output_dir: Any = None,
-                   single_image: Any = None,
-                   kernel_size: Any = None) -> None
-    """
-    input_function("INPUT_DIR", "OUTPUT_DIR", None, (5,5))
+
+
+"""
+def process_image(input_dir: Any = None,
+               output_dir: Any = None,
+               single_image: Any = None,
+               kernel_size: Any = None) -> None
+"""
+
+# process_image("INPUT_DIR", "OUTPUT_DIR", None, (5,5))
