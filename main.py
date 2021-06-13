@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import os
 import glob
+import sys, time
+
 
 if cv2.__version__ != "4.5.2":
     print("please install opencv-python==4.5")
@@ -137,7 +139,7 @@ def process_image(input_dir = None, output_dir = None, single_image = None, kern
     # file extensions
     extensions = ("*.jpg", "*.png")
     image_list = []
-
+    count = 0
     # check if input dir is valid or not
     if input_dir is not None:
         if os.path.isdir(input_dir):
@@ -180,8 +182,11 @@ def process_image(input_dir = None, output_dir = None, single_image = None, kern
 
         # write image to output dir
         cv2.imwrite(os.path.join(output_dir, image_name), final)
-        # print(output_dir)
 
+        # progress
+        count = count + 1
+        sys.stdout.write("\r" + "Image Count:{}".format(count))
+        sys.stdout.flush()
 
 
 
@@ -192,4 +197,4 @@ def process_image(input_dir: Any = None,
                kernel_size: Any = None) -> None
 """
 
-# process_image("INPUT_DIR", "OUTPUT_DIR", None, (5,5))
+process_image("INPUT_DIR", "OUTPUT_DIR", None, (5,5))
