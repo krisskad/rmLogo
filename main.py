@@ -109,9 +109,9 @@ def remove_logo(img):
             maskframe[y:y + h, x:x + w] = logoframe
 
             # remove logo from original image using mask
-            cleaned_logo = cv2.inpaint(img, maskframe, 3, cv2.INPAINT_NS)
+            img = cv2.inpaint(img, maskframe, 3, cv2.INPAINT_NS)
 
-    return cleaned_logo
+    return img
     # cv2.imwrite("detected.jpg", img)
     # cv2.imwrite("crop.jpg", final)
     # cv2.waitKey(0)
